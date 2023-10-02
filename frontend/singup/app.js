@@ -27,7 +27,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 submit.setAttribute("disabled", "disabled"); // غیرفعال کردن دکمه ارسال
             }
         } else {
-            resultElement.textContent = "حداقل 8 رقم و از حروف و اعداد استفاده کنیAt least 8 digits and use letters and numbers";
+            resultElement.textContent = "least 8 digits and use letters and numbers";
             resultElement.style.color = 'red';
             input1.style.borderBottomColor = "red";
             input1.style.color = "red";
