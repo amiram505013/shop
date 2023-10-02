@@ -3,6 +3,18 @@ const input2 = document.getElementById("input2");
 const submit = document.getElementById("submit");
 const resultElement = document.getElementById("result");
 
+curr = null
+submit.addEventListener('click' , (e)=>{
+    if(curr == null){
+        return
+    }else{
+        if (curr == 1) {
+            alert('Error')
+        } else {
+            return
+        }
+    }
+})
 document.addEventListener("DOMContentLoaded", function() {
 
     input1.addEventListener("input", compareInputs);
@@ -18,6 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 input1.style.color = "green";
                 input2.style.borderBottomColor = "green";
                 input2.style.color = "green";
+                curr = 0
                 submit.removeAttribute("disabled"); // فعال کردن دکمه ارسال
             } else {
                 input1.style.borderBottomColor = "red";
@@ -25,10 +38,10 @@ document.addEventListener("DOMContentLoaded", function() {
                 input2.style.borderBottomColor = "red";
                 input2.style.color = "red";
                 submit.setAttribute("disabled", "disabled"); // غیرفعال کردن دکمه ارسال
+                curr = 1
             }
         } else {
-            resultElement.innerText = "least 8 digits and use letters and numbers";
-            resultElement.style.color = 'red';
+            curr = 1
             input1.style.borderBottomColor = "red";
             input1.style.color = "red";
             input2.style.borderBottomColor = "red";
